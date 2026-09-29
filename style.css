@@ -1,0 +1,54 @@
+:root{--ink:#17212b;--muted:#556372;--paper:#f6f8fa;--card:#fff;--line:#d8e0e7;--accent:#0f766e;--accent-soft:#e3f2f0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;font-size:1rem}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.25rem}
+nav{border-bottom:1px solid var(--line);background:var(--card)}
+nav .wrap{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;padding-top:.85rem;padding-bottom:.85rem}
+nav strong{margin-right:auto}
+nav a{text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--accent)}
+.hero{padding:3.5rem 0 2.5rem;display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:0 0 1rem;letter-spacing:-.02em}
+.lead{color:var(--muted);font-size:1.1rem;max-width:34rem;margin:0 0 1.5rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.65rem 1.1rem;border-radius:6px;border:1px solid var(--accent);text-decoration:none;font-weight:600}
+.btn.primary{background:var(--accent);color:#fff}
+.result{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.result h2{margin:0;padding:.7rem 1rem;font-size:.85rem;background:var(--accent-soft);color:var(--accent);border-bottom:1px solid var(--line);font-weight:600}
+.result table{width:100%;border-collapse:collapse}
+.result th,.result td{text-align:left;padding:.7rem 1rem;border-bottom:1px solid var(--line);font-size:.95rem}
+.result tr:last-child td{border-bottom:0}
+.result td:last-child{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+section{padding:2.5rem 0;border-top:1px solid var(--line)}
+h2.title{font-size:1.6rem;margin:0 0 1.25rem;letter-spacing:-.01em}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+.skills div{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1rem}
+.skills h3{margin:0 0 .4rem;font-size:1rem}
+.skills p{margin:0;color:var(--muted);font-size:.95rem}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.4rem;margin-bottom:1.25rem}
+.proj.featured{border-left:5px solid var(--accent)}
+.proj h3{margin:0 0 .25rem;font-size:1.25rem}
+.meta{color:var(--muted);font-size:.9rem;margin:0 0 .9rem}
+.proj dl{margin:0;display:grid;grid-template-columns:8.5rem 1fr;gap:.5rem 1rem}
+.proj dt{font-weight:600}
+.proj dd{margin:0}
+.proj img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:6px;margin-top:1rem}
+.tags{list-style:none;padding:0;margin:1rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem}
+.tags li{background:var(--accent-soft);color:var(--accent);border-radius:4px;padding:.1rem .55rem;font-size:.85rem;font-weight:500}
+.job{margin-bottom:1.5rem}
+.job h3{margin:0}
+.job ul{margin:.5rem 0 0;padding-left:1.2rem}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.75rem;padding:0;list-style:none;margin:1rem 0 0}
+.certs li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.8rem 1rem}
+footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.9rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:2rem}.proj dl{grid-template-columns:1fr;gap:.1rem}.proj dd{margin-bottom:.6rem}}
+
+:root[data-theme="dark"]{--ink:#e6edf3;--muted:#9aa8b6;--paper:#0f151b;--card:#161e26;--line:#26323e;--accent:#3fc1b3;--accent-soft:#12302d}
+.btn.primary{color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#0f151b}
+nav a.active{color:var(--accent);border-bottom:2px solid var(--accent)}
+#theme-toggle{background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:.25rem .7rem;font:inherit;cursor:pointer}
+.copy-btn{background:none;border:1px solid var(--accent);color:var(--accent);border-radius:6px;padding:.1rem .6rem;font:inherit;font-size:.85rem;cursor:pointer;margin-left:.4rem}
